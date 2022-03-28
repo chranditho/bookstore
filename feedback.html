@@ -17,17 +17,13 @@
         <label for="found_what_need">What is the PRIMARY reason you came to the website?</label>
     </p>
     <p>
-        <textarea id="found_what_need" name="found_what_need" rows="5">
-            At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
-        </textarea>
+        <textarea id="found_what_need" name="found_what_need" rows="5"></textarea>
     </p>
     <p>
         <label for="primary_reason">What is the PRIMARY reason you came to the website?</label>
     </p>
     <p>
-<textarea id="primary_reason" name="primary_reason" rows="5">
-At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
-</textarea>
+<textarea id="primary_reason" name="primary_reason" rows="5"></textarea>
     </p>
     <div>
         <input type="radio" id="yes_all" name="visited" value="yes_all">
@@ -62,73 +58,37 @@ At w3schools.com you will learn how to make a website. They offer free tutorials
             <th>Exceeds Expectation</th>
         </tr>
         </thead>
-
         <tbody>
         <tr>
             <td>Professional</td>
-            <td>
-                <input type="radio" id="professional_below" name="professional" value="professional_below">
-                <label for="professional_below"></label>
-            </td>
-            <td>
-
-                <input type="radio" id="professional_meets" name="professional" value="professional_meets">
-                <label for="professional_meets"></label>
-            </td>
-            <td>
-
-                <input type="radio" id="professional_exceeds" name="professional" value="professional_exceeds">
-                <label for="professional_exceeds"></label>
-            </td>
+            <td><input type="radio" name="professional" value="professional_below"></td>
+            <td><input type="radio" name="professional" value="professional_meets"></td>
+            <td><input type="radio" name="professional" value="professional_exceeds"></td>
         </tr>
         <tr>
             <td>Informative</td>
-            <td>
-                <input type="radio" id="informative_below" name="informative" value="informative_below">
-                <label for="informative_below"></label>
-            </td>
-            <td>
-
-                <input type="radio" id="informative_meets" name="informative" value="informative_meets">
-                <label for="informative_meets"></label>
-            </td>
-            <td>
-
-                <input type="radio" id="informative_exceeds" name="informative" value="informative_exceeds">
-                <label for="informative_exceeds"></label>
-            </td>
+            <td><input type="radio" name="informative" value="informative_below"></td>
+            <td><input type="radio" name="informative" value="informative_meets"></td>
+            <td><input type="radio" name="informative" value="informative_exceeds"></td>
         </tr>
         <tr>
             <td>Professional</td>
-            <td>
-                <input type="radio" id="visually_pleasing_below" name="visually_pleasing"
-                       value="visually_pleasing_below">
-                <label for="professional_below"></label>
-            </td>
-            <td>
-
-                <input type="radio" id="visually_pleasing_meets" name="visually_pleasing"
-                       value="visually_pleasing_meets">
-                <label for="visually_pleasing_meets"></label>
-            </td>
-            <td>
-
-                <input type="radio" id="visually_pleasing_exceeds" name="visually_pleasing"
-                       value="visually_pleasing_exceeds">
-                <label for="visually_pleasing_exceeds"></label>
-            </td>
+            <td><input type="radio" name="visually_pleasing" value="visually_pleasing_below"></td>
+            <td><input type="radio" name="visually_pleasing" value="visually_pleasing_meets"></td>
+            <td><input type="radio" name="visually_pleasing" value="visually_pleasing_exceeds"></td>
         </tr>
         </tbody>
     </table>
     <p>Please add any comments you have for improving the website. We welcome suggestions on specific aresas for
         improvements, feature you would like to see added to the site, and examples of what you consider goog
-        websites.</p>
+        websites.
+    </p>
     <textarea id="comments" name="comments" rows="5"></textarea>
     <p>We would like to know a little bit about you</p>
     <div>
-        eMail: <input required type="text" onfocus="this.value=''" value="user@example.com">
-        Your Homepage: <input type="text" onfocus="this.value=''" value="http://www.example.com/">
-        Date of birth: <input type="date" onfocus="this.value=''" value="tt.mm.jjjj">
+        eMail: <input required type="email" placeholder="user@example.com">
+        Your Homepage: <input type="url" placeholder="http://www.example.com/">
+        Date of birth: <input type="date">
     </div>
     <button type="submit">Send</button>
 </form>

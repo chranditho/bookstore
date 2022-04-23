@@ -1,0 +1,67 @@
+body {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "header header header header"
+    ". nav . sidebar"
+    ". main main sidebar"
+    "footer footer footer footer";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.nav {
+    grid-area: nav
+}
+
+.content {
+    grid-area: main;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    position: sticky;
+    top: 0;
+    height: fit-content;
+}
+
+.shopping-cart {
+    position: sticky;
+    top: 0;
+    height: fit-content;
+}
+
+.footer {
+    padding: 1rem;
+    grid-area: footer;
+    position: sticky;
+    bottom: 0;
+    background: white;
+}
+
+.book{
+    display: flex;
+}
+
+.book-image {
+    width: 12rem;
+    padding: 0.5rem;
+    margin-right: 1rem
+}
+
+.book-content{
+    display: flex;
+    flex-direction: column;
+}

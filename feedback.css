@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+}
+
+h1 {
+    color: #00a8a8;
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    margin: unset;
+}
+
+h2 {
+    color: #00a8a8;
+    font-size: 1.5rem;
+    font-family: 'Pacifico', cursive;
+}
+
+h3 {
+    color: #00a8a8;
+    font-size: 1.25rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3rem;
+}
+
+textarea {
+    width: 100%;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

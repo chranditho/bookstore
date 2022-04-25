@@ -29,6 +29,13 @@ ul {
     padding: 0;
 }
 
+address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3rem;
+}
+
 .container {
     display: grid;
     grid-template-columns: 5% 45% 45% 5%;
@@ -108,12 +115,6 @@ ul {
     grid-area: footer;
 }
 
-address {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 3rem;
-}
 
 .book-container {
     display: flex;

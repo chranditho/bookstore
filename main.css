@@ -31,12 +31,12 @@ ul {
 
 .container {
     display: grid;
-    grid-template-columns: 10% 75% 15%;
+    grid-template-columns: 5% 45% 45% 5%;
     grid-template-rows: auto;
     grid-template-areas:
-    "header header header"
-    ". main ."
-    ". footer sidebar";
+    "header header header header"
+    ". main main ."
+    "footer footer sidebar sidebar";
 }
 
 .header {
@@ -99,6 +99,8 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: end;
+    margin-right: 1rem;
 }
 
 .footer {

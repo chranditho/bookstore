@@ -7,112 +7,136 @@
     <link rel="stylesheet" href="feedback.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Pacifico&family=Poppins:wght@400;500&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;500;600;700&family=Pacifico&family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 </head>
 <body>
-<form action="main.html">
+<form action="main.html" class="form">
     <div class="flex-center">
-    <h1 class="full-width">Website Feedback Form</h1>
+        <h1 class="full-width">Website Feedback Form</h1>
     </div>
 
-    <p>
-        Is this the first time you have visited the website?
-    </p>
-    <div>
-        <input type="radio" id="yes" name="visited" value="yes">
-        <label for="yes">yes</label>
-        <input type="radio" id="no" name="visited" value="no">
-        <label for="no">no</label>
+    <div class="form-field">
+        <p>
+            Is this the first time you have visited the website?
+        </p>
+        <div>
+            <input type="radio" id="yes" name="visited" value="yes">
+            <label for="yes">yes</label>
+            <input type="radio" id="no" name="visited" value="no">
+            <label for="no">no</label>
+        </div>
     </div>
 
-    <p>
-        <label for="reason">What is the PRIMARY reason you came to the website?</label>
-    </p>
-    <p>
-        <textarea id="reason" name="reason" rows="5"></textarea>
-    </p>
+    <div class="form-field">
 
-    <p>
-        Did you find what you needed?
-    </p>
-    <div>
-        <input type="radio" id="yes_all" name="need_found" value="yes_all">
-        <label for="yes_all">Yes, all of it</label>
-        <input type="radio" id="yes_some" name="need_found" value="yes_some">
-        <label for="yes_some">Yes, some of it</label>
-        <input type="radio" id="no_none" name="need_found" value="no_none">
-        <label for="no_none">No, none of it</label>
+        <p>
+            <label for="reason">What is the PRIMARY reason you came to the website?</label>
+        </p>
+        <p>
+            <textarea id="reason" name="reason" rows="5"></textarea>
+        </p>
     </div>
 
-    <p>
-        <label for="looking_for">If you did not find any or all of what you needed, please tell us what information
-            you were looking for.</label>
-    </p>
-    <p>
-        <textarea id="looking_for" name="looking_for" rows="5"></textarea>
-    </p>
+    <div class="form-field">
 
-
-    <p>
-        Please tell us how easy it is to find information on the site.
-    </p>
-    <div>
-        <input type="radio" id="very_easy" name="difficulty_to_find_information" value="very_easy">
-        <label for="very_easy">Very easy</label>
-        <input type="radio" id="easy" name="difficulty_to_find_information" value="easy">
-        <label for="easy">Easy</label>
-        <input type="radio" id="average" name="difficulty_to_find_information" value="average">
-        <label for="average">Average</label>
-        <input type="radio" id="difficult" name="difficulty_to_find_information" value="difficult">
-        <label for="difficult">Difficult</label>
-        <input type="radio" id="very_difficult" name="difficulty_to_find_information" value="very_difficult">
-        <label for="very_difficult">Very Difficult</label>
+        <p>
+            Did you find what you needed?
+        </p>
+        <div>
+            <input type="radio" id="yes_all" name="need_found" value="yes_all">
+            <label for="yes_all">Yes, all of it</label>
+            <input type="radio" id="yes_some" name="need_found" value="yes_some">
+            <label for="yes_some">Yes, some of it</label>
+            <input type="radio" id="no_none" name="need_found" value="no_none">
+            <label for="no_none">No, none of it</label>
+        </div>
     </div>
 
-    <p>What is the overall impression of the site?</p>
-    <table>
-        <thead>
-        <tr>
-            <th></th>
-            <th>Below Expectations</th>
-            <th>Meets Expectations</th>
-            <th>Exceeds Expectation</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Professional</td>
-            <td><input type="radio" name="professional" value="professional_below"></td>
-            <td><input type="radio" name="professional" value="professional_meets"></td>
-            <td><input type="radio" name="professional" value="professional_exceeds"></td>
-        </tr>
-        <tr>
-            <td>Informative</td>
-            <td><input type="radio" name="informative" value="informative_below"></td>
-            <td><input type="radio" name="informative" value="informative_meets"></td>
-            <td><input type="radio" name="informative" value="informative_exceeds"></td>
-        </tr>
-        <tr>
-            <td>Visually Pleasing</td>
-            <td><input type="radio" name="visually_pleasing" value="visually_pleasing_below"></td>
-            <td><input type="radio" name="visually_pleasing" value="visually_pleasing_meets"></td>
-            <td><input type="radio" name="visually_pleasing" value="visually_pleasing_exceeds"></td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="form-field">
 
-    <p>Please add any comments you have for improving the website. We welcome suggestions on specific aresas for
-        improvements, feature you would like to see added to the site, and examples of what you consider goog
-        websites.
-    </p>
-    <textarea id="comments" name="comments" rows="5"></textarea>
 
-    <p>We would like to know a little bit about you</p>
-    <div>
-        eMail: <input required type="email" placeholder="user@example.com" name="customer_email">
-        Your Homepage: <input type="url" placeholder="http://www.example.com/" name="customer_homepage">
-        Date of birth: <input type="date" name="customer_birth_date">
+        <p>
+            <label for="looking_for">If you did not find any or all of what you needed, please tell us what information
+                you were looking for.</label>
+        </p>
+        <p>
+            <textarea id="looking_for" name="looking_for" rows="5"></textarea>
+        </p>
+    </div>
+
+
+    <div class="form-field">
+
+        <p>
+            Please tell us how easy it is to find information on the site.
+        </p>
+        <div>
+            <input type="radio" id="very_easy" name="difficulty_to_find_information" value="very_easy">
+            <label for="very_easy">Very easy</label>
+            <input type="radio" id="easy" name="difficulty_to_find_information" value="easy">
+            <label for="easy">Easy</label>
+            <input type="radio" id="average" name="difficulty_to_find_information" value="average">
+            <label for="average">Average</label>
+            <input type="radio" id="difficult" name="difficulty_to_find_information" value="difficult">
+            <label for="difficult">Difficult</label>
+            <input type="radio" id="very_difficult" name="difficulty_to_find_information" value="very_difficult">
+            <label for="very_difficult">Very Difficult</label>
+        </div>
+    </div>
+
+    <div class="form-field">
+
+        <p>What is the overall impression of the site?</p>
+        <table>
+            <thead>
+            <tr>
+                <th></th>
+                <th>Below Expectations</th>
+                <th>Meets Expectations</th>
+                <th>Exceeds Expectation</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Professional</td>
+                <td><input type="radio" name="professional" value="professional_below"></td>
+                <td><input type="radio" name="professional" value="professional_meets"></td>
+                <td><input type="radio" name="professional" value="professional_exceeds"></td>
+            </tr>
+            <tr>
+                <td>Informative</td>
+                <td><input type="radio" name="informative" value="informative_below"></td>
+                <td><input type="radio" name="informative" value="informative_meets"></td>
+                <td><input type="radio" name="informative" value="informative_exceeds"></td>
+            </tr>
+            <tr>
+                <td>Visually Pleasing</td>
+                <td><input type="radio" name="visually_pleasing" value="visually_pleasing_below"></td>
+                <td><input type="radio" name="visually_pleasing" value="visually_pleasing_meets"></td>
+                <td><input type="radio" name="visually_pleasing" value="visually_pleasing_exceeds"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="form-field">
+
+        <p>Please add any comments you have for improving the website. We welcome suggestions on specific aresas for
+            improvements, feature you would like to see added to the site, and examples of what you consider goog
+            websites.
+        </p>
+        <textarea id="comments" name="comments" rows="5"></textarea>
+    </div>
+
+    <div class="form-field">
+
+        <p>We would like to know a little bit about you</p>
+        <div>
+            eMail: <input required type="email" placeholder="user@example.com" name="customer_email">
+            Your Homepage: <input type="url" placeholder="http://www.example.com/" name="customer_homepage">
+            Date of birth: <input type="date" name="customer_birth_date">
+        </div>
     </div>
 
     <button type="submit">Send</button>

@@ -1,67 +1,132 @@
-body {
-    font-family: 'Roboto Slab', serif;
-    font-weight: 400;
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+}
+
+h1 {
+    color: #00a8a8;
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
+    margin: unset;
+}
+
+h2 {
+    color: #00a8a8;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h3 {
+    color: #00a8a8;
+    font-size: 1.25rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-columns: 10% 75% 15%;
     grid-template-rows: auto;
     grid-template-areas:
-    "header header header header"
-    ". nav . sidebar"
-    ". main main sidebar"
-    "footer footer footer footer";
+    "header header header"
+    ". main ."
+    ". footer sidebar";
 }
 
 .header {
     grid-area: header;
+    padding: 1rem;
+    border-bottom: #00a8a8 2px solid;
+}
+
+.logo {
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
 }
 
-.nav {
-    grid-area: nav
-}
-
-.content {
-    grid-area: main;
-}
-
-.sidebar {
-    grid-area: sidebar;
+.sticky-top {
     position: sticky;
     top: 0;
-    height: fit-content;
+    background: white;
 }
 
-.shopping-cart {
-    position: sticky;
-    top: 0;
-    height: fit-content;
-}
-
-.footer {
-    padding: 1rem;
-    grid-area: footer;
+.sticky-bottom {
     position: sticky;
     bottom: 0;
     background: white;
 }
 
-.book{
+.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 2.5rem;
+}
+
+.category {
+    display: block;
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+    cursor: pointer;
+    transition: 0.1s;
+    font-size: 1rem;
+    padding: 0.25rem;
+}
+
+.category:hover {
+    font-weight: 400;
+    font-size: 1.125rem;
+    color: #00a8a8;
+    animation: fade 2s linear;
+}
+
+.content {
+    grid-area: main;
+    padding: 1rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer {
+    padding: 1rem;
+    grid-area: footer;
+}
+
+address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3rem;
+}
+
+.book {
     display: flex;
 }
 
 .book-image {
-    width: 12rem;
+    width: 8rem;
+    height: 12rem;
+    display: block;
     padding: 0.5rem;
     margin-right: 1rem
 }
 
-.book-content{
+.book-content {
     display: flex;
     flex-direction: column;
+    line-break: auto;
 }

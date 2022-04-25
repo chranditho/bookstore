@@ -15,7 +15,7 @@ h1 {
 h2 {
     color: #00a8a8;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-family: 'Pacifico', cursive;
 }
 
 h3 {
@@ -113,8 +113,14 @@ address {
     height: 3rem;
 }
 
+.book-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .book {
     display: flex;
+    flex-direction: column;
 }
 
 .book-image {
@@ -129,4 +135,11 @@ address {
     display: flex;
     flex-direction: column;
     line-break: auto;
+}
+
+@media screen and (min-width: 720px) {
+    .book {
+        flex-direction: row;
+        align-items: center;
+    }
 }

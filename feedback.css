@@ -1,7 +1,6 @@
 html, body {
     height: 100%;
     margin: 0;
-    padding: 1rem;
     font-family: 'Merriweather', serif;
     font-weight: 300;
 }
@@ -42,43 +41,63 @@ textarea {
 }
 
 fieldset {
-    -moz-border-radius:1rem;
+    -moz-border-radius: 1rem;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
 }
 
-p{
+p {
     font-weight: 600;
 }
 
-.form-field{
+.form-field {
     border: #00a8a8 2px solid;
     border-radius: 1rem;
     padding: 1rem;
     background: rgba(0, 168, 168, 0.15);
 }
 
-.centered{
-    text-align:center;
-    vertical-align:middle;
+.centered {
+    text-align: center;
+    vertical-align: middle;
 }
 
-.personal-infos{
+.personal-infos {
     display: flex;
     justify-content: space-evenly;
 }
 
-.personal-info{
+.personal-info {
     margin: 1rem 0 1rem 0;
     width: 100%;
     max-width: 20rem;
     display: block;
+}
+
+.submit-button {
+    border: #00a8a8 3px solid;
+    padding: 0.25rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    max-width: 18rem;
+    height: 3rem;
+    transition: 0.1s;
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+
+.submit-button:hover {
+    color: white;
+    background: #00a8a8;
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
 }
 
 @media screen and (max-width: 400px) {

@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    padding: 1rem;
     font-family: 'Merriweather', serif;
     font-weight: 300;
 }
@@ -40,8 +41,28 @@ textarea {
     width: 100%;
 }
 
-.flex-center{
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 0.75rem;
+        padding: 0.25rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
 }

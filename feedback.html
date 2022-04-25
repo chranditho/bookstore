@@ -100,28 +100,28 @@
             <tbody>
             <tr>
                 <td>Professional</td>
-                <td><input type="radio" name="professional" value="professional_below"></td>
-                <td><input type="radio" name="professional" value="professional_meets"></td>
-                <td><input type="radio" name="professional" value="professional_exceeds"></td>
+                <td class="centered"><input type="radio" name="professional" value="professional_below"></td>
+                <td class="centered"><input type="radio" name="professional" value="professional_meets"></td>
+                <td class="centered"><input type="radio" name="professional" value="professional_exceeds"></td>
             </tr>
             <tr>
                 <td>Informative</td>
-                <td><input type="radio" name="informative" value="informative_below"></td>
-                <td><input type="radio" name="informative" value="informative_meets"></td>
-                <td><input type="radio" name="informative" value="informative_exceeds"></td>
+                <td class="centered"><input type="radio" name="informative" value="informative_below"></td>
+                <td class="centered"><input type="radio" name="informative" value="informative_meets"></td>
+                <td class="centered"><input type="radio" name="informative" value="informative_exceeds"></td>
             </tr>
             <tr>
                 <td>Visually Pleasing</td>
-                <td><input type="radio" name="visually_pleasing" value="visually_pleasing_below"></td>
-                <td><input type="radio" name="visually_pleasing" value="visually_pleasing_meets"></td>
-                <td><input type="radio" name="visually_pleasing" value="visually_pleasing_exceeds"></td>
+                <td class="centered"><input type="radio" name="visually_pleasing" value="visually_pleasing_below"></td>
+                <td class="centered"><input type="radio" name="visually_pleasing" value="visually_pleasing_meets"></td>
+                <td class="centered"><input type="radio" name="visually_pleasing" value="visually_pleasing_exceeds">
+                </td>
             </tr>
             </tbody>
         </table>
     </div>
 
     <div class="form-field">
-
         <p>Please add any comments you have for improving the website. We welcome suggestions on specific aresas for
             improvements, feature you would like to see added to the site, and examples of what you consider goog
             websites.
@@ -130,12 +130,28 @@
     </div>
 
     <div class="form-field">
-
         <p>We would like to know a little bit about you</p>
-        <div>
-            eMail: <input required type="email" placeholder="user@example.com" name="customer_email">
-            Your Homepage: <input type="url" placeholder="http://www.example.com/" name="customer_homepage">
-            Date of birth: <input type="date" name="customer_birth_date">
+        <div class="personal-infos">
+            <div>
+                <div>
+                    eMail:
+                </div>
+                <input required type="email" placeholder="user@example.com" name="customer_email"
+                       class="personal-info">
+            </div>
+            <div>
+                <div>
+                    Your Homepage:
+                </div>
+                <input type="url" placeholder="http://www.example.com/" name="customer_homepage"
+                       class="personal-info">
+            </div>
+            <div>
+                <div>
+                    Date of birth:
+                </div>
+                <input type="date" name="customer_birth_date" class="personal-info">
+            </div>
         </div>
     </div>
 

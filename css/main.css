@@ -50,6 +50,9 @@ address {
     grid-area: header;
     padding: 1rem;
     border-bottom: #00a8a8 2px solid;
+    color: #00a8a8;
+    font-size: 2rem;
+    font-family: 'Pacifico', cursive;
 }
 
 .logo {

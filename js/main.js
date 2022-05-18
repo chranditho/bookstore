@@ -66,22 +66,22 @@ class ShoppingCart {
     add(book) {
         this.books.push(book);
 
-        /* --- Task3 --- 
+        /* --- Task3 ---
          * Create a new li element representing the book in the shopping cart.
-         * Include the title of the book, the selected quantity and the total 
+         * Include the title of the book, the selected quantity and the total
          * price for the (quantity * price). Round the total price you
          * calculated using the round(...) method in this class before
          * displaying it.
-         * 
+         *
          * Important: Make sure to add the id given by the cartId property of
          * the book as the id of your li element.
-         * 
+         *
          * Finally, add the newly created li element to the ul (unordered list)
          * of the aside element (the shopping cart)
-         * 
+         *
          * An example of what a link element should look like (although you
          * don't have to implement it exactly this way):
-         * 
+         *
          * <li id="cart-isbn-978-0596806026">
          *     <span>Html5: Up And Running</span>
          *     <span>3 Pcs. - 74.4�</span>
@@ -98,9 +98,9 @@ class ShoppingCart {
     }
 
     round(amount) {
-        /* --- Task 4 --- 
+        /* --- Task 4 ---
          * Find a way to round the given amount with preision 2 and return the
-         * rounded amount. 
+         * rounded amount.
          */
     }
 
@@ -113,7 +113,7 @@ class ShoppingCart {
 class BookStore {
     /* MAX_QUANTITY is the maximum quantity a user can order. You should use this constant in
      * your code to control the number of options you create in the quantity select elements.
-     * 
+     *
      * If you want to know more about static properties, read this article:
      * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
      */
@@ -135,50 +135,53 @@ class BookStore {
     addCategoryToDOM(category) {
         /* --- Task 1 ---
          * Add code to create a new section element containing an h1 element with the category title
-         * and add it to the main element 
-         * 
+         * and add it to the main element
+         *
          * Hint: Do not forget to add the category id to the section or else your nav links are not
          *       going to work.
-         * 
+         *
          * Here's how an example section element should look like:
-         * 
+         *
          * <section id="html5">
          *     <h1>HTML 5 Books</h1>
          * </section>
          */
 
-        var tag = document.createElement("p");
-        var text = document.createTextNode("Tutorix is the best e-learning platform");
-        tag.appendChild(text);
-        var element = document.getElementById("new");
-        element.appendChild(tag);
+        const section = document.createElement("section");
+        section.id = category.id;
+        const h1 = document.createElement("h1");
+        const text = document.createTextNode(category.title);
+        h1.appendChild(text);
+        section.append(h1);
+        const element = document.getElementById("main");
+        element.appendChild(section);
     }
 
     addBookToDOM(category, book) {
-        /* --- Task 2 --- 
-         * Add code to create a new article element containing 
+        /* --- Task 2 ---
+         * Add code to create a new article element containing
          *   - an h3 with the book title
          *   - the book's image
          *   - a paragraph with the quantity (label and select box) and the button "Add to cart".
          *     On the button, add a listener for the "click" event, which when clicked will call the
          *     addTo(...) method on the book and pass along the shopping cart initialized in the
-         *     constructor as a parameter      
-         *   - a paragraph with the book's price 
+         *     constructor as a parameter
+         *   - a paragraph with the book's price
          *   - a paragraph with the book's description.
-         * 
+         *
          * Finally add the new article element to the section which represents the catgory of the book
-         * 
+         *
          * Important: Add the id provided by book.id as the id of your article element!
-         * 
+         *
          * Remember: You can assign attributes to your elements using the properties of the element.
-         *           For example, given an img element that you created using 
+         *           For example, given an img element that you created using
          *           document.createElement("img") assigned to variable myImage you can set the
          *           following attributes:
          *              myImage.src = ... here goes the url of the image ...
          *              myImage.alt = ... here the alternative next of the image
-         * 
+         *
          * Here's what an example article (more or less) should look like in the end:
-         * 
+         *
          * <article id="isbn-978-0596806026">
          *    <h3>Html5: Up And Running</h3>
          *    <img src="images/HTML5_Up_And_Running.jpg" alt="Cover of 'Html5: Up And Running'">
@@ -200,6 +203,59 @@ class BookStore {
          *         you develop for the Web.</p>
          * </article>
          */
+
+        const article = document.createElement("article");
+        article.id = book.id;
+
+        const h3 = document.createElement("h3");
+        const h3Text = document.createTextNode(book.title);
+        h3.appendChild(h3Text)
+
+        article.append(h3);
+
+        const img = document.createElement("img");
+        img.src = book.cover;
+        img.alt = book.title;
+
+        article.append(img)
+
+        const pQuantity = document.createElement("p");
+        const label = document.createElement("label")
+        const labelText = document.createTextNode("Quantity:")
+        label.appendChild(labelText)
+        pQuantity.appendChild(label)
+
+        article.append(pQuantity)
+
+        const select = document.createElement("select");
+        for (let i = 0; i < 5; i++) {
+            const opt = document.createElement('option');
+            opt.value = i.toString();
+            opt.innerHTML = i.toString();
+            select.appendChild(opt);
+        }
+        label.appendChild(select)
+
+        const input = document.createElement("input")
+        input.type = "button"
+        input.value = "Add to cart"
+        select.appendChild(input)
+
+        const price = document.createElement("p")
+        const priceText = document.createTextNode("Price: " + book.price + "€")
+        price.appendChild(priceText)
+        article.append(price)
+
+
+        const pDescription = document.createElement("p");
+        const pText = document.createTextNode(book.description);
+        pDescription.appendChild(pText)
+
+        article.append(pDescription)
+
+        const section = document.getElementById(category.id);
+        section.append(article);
+
     }
 }
 

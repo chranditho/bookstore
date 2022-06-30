@@ -87,6 +87,23 @@ class ShoppingCart {
          *     <span>3 Pcs. - 74.4�</span>
          * </li>
          */
+
+        const li = document.createElement("li")
+        li.id = book.cartId
+        const title = document.createElement("span")
+        const titleText = document.createTextNode(book.title);
+        title.appendChild(titleText)
+        const quantity = document.createElement("span")
+        const quantityText = document.createTextNode(" " + book.quantity + "Pcs. "+  this.round(book.quantity * book.price));
+        quantity.appendChild(quantityText)
+        li.append(title)
+        li.appendChild(quantity)
+
+        const sum = document.getElementById("sum")
+        sum.append(document.createTextNode(this.calculateSum()))
+
+        const ul = document.querySelector("aside ul");
+        ul.appendChild(li)
     }
 
     calculateSum() {
@@ -102,6 +119,7 @@ class ShoppingCart {
          * Find a way to round the given amount with preision 2 and return the
          * rounded amount.
          */
+        return (Math.round(amount * 100) / 100);
     }
 
     showSum() {
@@ -214,7 +232,7 @@ class BookStore {
         article.append(h3);
 
         const img = document.createElement("img");
-        img.src = book.cover;
+        img.src = "../" + book.cover;
         img.alt = book.title;
 
         article.append(img)
@@ -236,10 +254,12 @@ class BookStore {
         }
         label.appendChild(select)
 
-        const input = document.createElement("input")
+        const input = document.createElement("button")
         input.type = "button"
-        input.value = "Add to cart"
-        select.appendChild(input)
+        const inputText = document.createTextNode("Add to card")
+        input.onclick = () => book.addTo(this.cart)
+        input.appendChild(inputText)
+        pQuantity.appendChild(input)
 
         const price = document.createElement("p")
         const priceText = document.createTextNode("Price: " + book.price + "€")
